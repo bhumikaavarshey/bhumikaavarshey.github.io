@@ -1,209 +1,152 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <title>Bhumika Varshney | Elite Portfolio</title>
+<title>Bhumika Varshney | Portfolio</title>
 
-  <style>
-    html { scroll-behavior: smooth; }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #020617;
-      color: white;
-    }
+<style>
+html { scroll-behavior: smooth; }
 
-    header {
-      text-align: center;
-      padding: 60px;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-    }
-
-    img.profile {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 3px solid #38bdf8;
-      transition: 0.4s;
-      object-fit: cover;
-    }
-
-    img.profile:hover {
-      transform: scale(1.1);
-    }
-
-    h1 { margin: 15px 0 5px; }
-
-    #typing {
-      color: #38bdf8;
-      font-weight: bold;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #38bdf8;
-      color: black;
-      border-radius: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: white;
-    }
-
-    nav {
-      text-align: center;
-      background: black;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-    }
-
-    nav a {
-      color: #38bdf8;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: white;
-    }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px;
-    }
-
-    h2 {
-      color: #38bdf8;
-      border-bottom: 2px solid #1e293b;
-      padding-bottom: 10px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px #38bdf8;
-    }
-
-    .bar {
-      background: #334155;
-      border-radius: 20px;
-      margin-top: 10px;
-    }
-
-    .fill {
-      height: 10px;
-      background: #38bdf8;
-      border-radius: 20px;
-    }
-
-    img.cert {
-      width: 100%;
-      margin-top: 10px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    a.social {
-      color: #38bdf8;
-      margin-right: 15px;
-      text-decoration: none;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.9);
-      top: 0;
-      left: 0;
-    }
-
-    .modal img {
-      display: block;
-      margin: auto;
-      max-width: 90%;
-      margin-top: 60px;
-    }
-
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 40px;
-      font-size: 30px;
-      cursor: pointer;
-    }
-  .contact-box {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.social-links {
-  margin-top: 20px;
-}
-
-.social-btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 20px;
-  border-radius: 30px;
-  text-decoration: none;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #020617;
   color: white;
-  font-weight: 500;
+}
+
+/* BACKGROUND */
+#bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+nav h1 { color: #38bdf8; }
+
+nav a {
+  margin-left: 15px;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 60px;
+}
+
+.profile {
+  width: 160px;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #38bdf8;
+}
+
+/* SECTION */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+/* ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  color: #38bdf8;
+  border-bottom: 2px solid #1e293b;
+}
+
+/* CARD */
+.card {
+  background: rgba(30,41,59,0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
   transition: 0.3s;
 }
 
-.instagram {
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743);
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #38bdf8;
 }
 
-.linkedin {
-  background: #0077b5;
+/* SKILLS */
+.bar { background: #334155; border-radius: 20px; }
+.fill { height: 10px; background: #38bdf8; }
+
+/* CERT GRID */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
 }
 
-.social-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+.cert-grid img {
+  width: 100%;
+  border-radius: 10px;
 }
-    
-  </style>
+
+/* CONTACT */
+.contact-box { text-align: center; }
+
+.contact-box a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 20px;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <img src="profile.jpeg" class="profile">
-  <h1>Bhumika Varshney</h1>
-  <p id="typing"></p>
-  <a href="#contact" class="btn">Hire Me</a>
-</header>
+<canvas id="bg"></canvas>
 
 <nav>
-  <a href="#about">About</a>
-  <a href="#education">Education</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#certifications">Certificates</a>
-  <a href="#contact">Contact</a>
+  <h1>Bhumika</h1>
+  <div>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#certifications">Certificates</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-<section id="about">
+<header class="reveal">
+  <img src="profile.jpeg" class="profile">
+  <h1>Bhumika Varshney</h1>
+  <p>Future Business Leader | BBA Student</p>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
   <h2>About Me</h2>
   <div class="card">
     I am a driven and ambitious BBA student with a strong interest in business strategy, finance, and leadership. I take pride in being proactive, responsible, and capable of handling challenges with clarity and confidence.
@@ -214,7 +157,8 @@
   </div>
 </section>
 
-<section id="education">
+<!-- EDUCATION -->
+<section id="education" class="reveal">
   <h2>Education</h2>
 
   <div class="card">
@@ -224,231 +168,120 @@
   </div>
 
   <div class="card">
-    <b>Class 12th (Senior Secondary)</b><br>
+    <b>Class 12th</b><br>
     Radiant Stars English School<br>
     Score: 94%
   </div>
 
   <div class="card">
-    <b>Class 10th (High School)</b><br>
+    <b>Class 10th</b><br>
     Radiant Stars English School<br>
     Score: 90%
   </div>
+</section>
 
-<section id="skills">
+<!-- SKILLS -->
+<section id="skills" class="reveal">
   <h2>Skills</h2>
 
   <div class="card">
-
-    <p>Communication & Presentation</p>
-    <div class="bar"><div class="fill" style="width:92%"></div></div>
-
-    <p>Leadership & Team Coordination</p>
-    <div class="bar"><div class="fill" style="width:88%"></div></div>
-
-    <p>Social Media Management & Personal Branding</p>
-    <div class="bar"><div class="fill" style="width:90%"></div></div>
-
-    <p>Content Creation & Visual Storytelling</p>
-    <div class="bar"><div class="fill" style="width:87%"></div></div>
-
-    <p>Photography & Aesthetic Direction</p>
-    <div class="bar"><div class="fill" style="width:85%"></div></div>
-
-    <p>Digital Marketing & Audience Engagement</p>
-    <div class="bar"><div class="fill" style="width:82%"></div></div>
-
-    <p>Microsoft Office & Business Tools</p>
-    <div class="bar"><div class="fill" style="width:80%"></div></div>
-
-    <p>Time Management & Organizational Skills</p>
-    <div class="bar"><div class="fill" style="width:88%"></div></div>
-
-    <p>Adaptability & Problem Solving</p>
-    <div class="bar"><div class="fill" style="width:85%"></div></div>
-
-    <p>Confidence, Public Interaction & Personal Presence</p>
-    <div class="bar"><div class="fill" style="width:90%"></div></div>
-
+    Communication & Presentation<div class="bar"><div class="fill" style="width:92%"></div></div>
+    Leadership & Team Coordination<div class="bar"><div class="fill" style="width:88%"></div></div>
+    Social Media Management<div class="bar"><div class="fill" style="width:90%"></div></div>
+    Content Creation<div class="bar"><div class="fill" style="width:87%"></div></div>
+    Photography<div class="bar"><div class="fill" style="width:85%"></div></div>
   </div>
 </section>
 
-<section id="experience">
-  <h2>Experience</h2>
-
-  <div class="card">
-    <b>Social Media & Event Coordination – AFIF, AMU</b><br><br>
-
-    • Managed and contributed to social media activities, improving engagement and visibility.<br>
-    • Actively participated in the AMU Market Immersion Program, gaining exposure to real-world business environments.<br>
-    • Coordinated with team members to plan and execute events efficiently.<br>
-    • Developed strong communication, teamwork, and organizational skills through practical involvement.<br>
-  </div>
-
-  <div class="card">
-    <b>Event Management & Leadership Experience</b><br><br>
-
-    • Organized and managed academic and co-curricular events at school and college level.<br>
-    • Handled responsibilities such as planning, coordination, and execution of activities.<br>
-    • Demonstrated leadership by managing teams and ensuring smooth workflow.<br>
-    • Built strong problem-solving abilities by handling real-time challenges during events.<br>
-  </div>
-
-
-  <div class="card">
-    <b>Market Research & Consumer Behavior Analysis</b><br><br>
-
-    • Conducted a study on consumer preferences and buying behavior in local markets.<br>
-    • Collected and analyzed data to identify trends and decision-making patterns.<br>
-    • Developed insights on pricing, product positioning, and customer expectations.<br>
-    • Enhanced analytical thinking and understanding of real-world business scenarios.<br>
-  </div>
-
-  <div class="card">
-    <b>Social Media Strategy & Brand Engagement Project</b><br><br>
-
-    • Designed a social media strategy to improve brand visibility and audience engagement.<br>
-    • Planned content ideas and engagement techniques for better reach and interaction.<br>
-    • Analyzed basic performance metrics to understand audience response.<br>
-    • Strengthened skills in digital marketing, creativity, and strategic thinking.<br>
-  </div>
-
-<section id="certifications" class="reveal">
-  <h2>Certifications</h2>
-
-
-  <div class="card">
-    <b>Social Media Member – AMU Market Immersion Program (AFIF)</b><br><br>
-
-    • Participated in a structured market immersion program focused on practical business exposure.<br>
-    • Gained hands-on experience in teamwork, coordination, and execution.<br>
-    • Developed communication and real-world problem-solving skills.<br><br>
-
-    <img src="certificate 1.jpeg" class="cert" onclick="openModal(this.src)">
-  </div>
-
-  <div class="card">
-    <b>Excel for Finance Workshop – AMU</b><br><br>
-
-    • Completed training on financial modeling and advanced Excel functions.<br>
-    • Gained understanding of data handling and financial analysis basics.<br>
-    • Strengthened analytical and technical skills relevant to business applications.<br><br>
-
-    <img src="certificate 2.jpeg" class="cert" onclick="openModal(this.src)">
-  </div>
-
-  <div class="card">
-    <b>Web Designing Basics – Simplilearn</b><br><br>
-
-    • Learned fundamentals of website structure, HTML, and design principles.<br>
-    • Developed understanding of creating and structuring web pages.<br>
-    • Applied concepts in building a personal portfolio website.<br><br>
-
-    <img src="certificate 3.jpg" class="cert" onclick="openModal(this.src)">
-  </div>
-
-  <div class="card">
-    <b>Digital Marketing Certification – HubSpot Academy</b><br><br>
-
-    • Gained knowledge of SEO, content marketing, and audience engagement strategies.<br>
-    • Learned how to create and optimize digital campaigns.<br>
-    • Developed understanding of analytics and marketing performance tracking.<br><br>
-
-    <img src="certificate 4.png" class="cert" onclick="openModal(this.src)">
-  </div>
-
-  <div class="card">
-    <b>Basics of Ornithology and Indian Birds – AMU</b><br><br>
-
-    • Demonstrated strong knowledge and scored 97% in national-level quiz.<br>
-    • Developed research and analytical thinking skills.<br>
-    • Showed academic curiosity and subject understanding.<br><br>
-
-    <img src="certificate 5.jpeg" class="cert" onclick="openModal(this.src)">
-  </div>
-
-  <div class="card">
-    <b>Introduction to Business Communication – Simplilearn</b><br><br>
-
-    • Learned professional communication techniques for business environments.<br>
-    • Improved verbal, written, and presentation skills.<br>
-    • Strengthened confidence in professional interactions.<br><br>
-
-    <img src="certificate 6.jpg" class="cert" onclick="openModal(this.src)">
-  </div>
-
-</section>
-  </div>
-</section>
-
+<!-- EXPERIENCE -->
 <section id="experience" class="reveal">
   <h2>Experience</h2>
 
   <div class="card">
-    <b>Internship – Robin Hood Army (RHA)</b><br><br>
-
-    • Recognized for dedication, responsibility, and contribution during internship.<br>
-    • Worked in team-driven initiatives focused on social impact and community support.<br>
-    • Developed strong teamwork, communication, and execution skills.<br><br>
-
-    <img src="internship 1.jpeg" class="cert" onclick="openModal(this.src)">
+    <b>Social Media & Event Coordination – AFIF</b><br><br>
+    • Managed social media activities and engagement<br>
+    • Participated in AMU Market Immersion Program<br>
+    • Coordinated events and teamwork<br>
+    • Developed leadership and communication skills
   </div>
 
   <div class="card">
-    <b>Research Internship – Borcelle Company</b><br><br>
-
-    • Worked on Sustainable Development Research project over a 5-month duration.<br>
-    • Gained exposure to research-based thinking, analysis, and structured work approach.<br>
-    • Strengthened problem-solving, analytical, and professional communication skills.<br><br>
-
-    <img src="internship 2.jpeg" class="cert" onclick="openModal(this.src)">
+    <b>Market Research Project</b><br><br>
+    • Studied consumer behavior<br>
+    • Analyzed trends and patterns<br>
+    • Developed insights on pricing and positioning
   </div>
 
+  <div class="card">
+    <b>Internship – Robin Hood Army</b><br><br>
+    <img src="internship 1.jpeg" width="100%">
+  </div>
+
+  <div class="card">
+    <b>Research Internship – Borcelle</b><br><br>
+    <img src="internship 2.jpeg" width="100%">
+  </div>
 </section>
 
+<!-- CERTIFICATES -->
+<section id="certifications" class="reveal">
+  <h2>Certificates</h2>
 
+  <div class="cert-grid">
+    <img src="certificate 1.jpeg">
+    <img src="certificate 2.jpeg">
+    <img src="certificate 3.jpg">
+    <img src="certificate 4.png">
+    <img src="certificate 5.jpeg">
+    <img src="certificate 6.jpg">
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact" class="reveal">
   <h2>Contact</h2>
 
-  <div class="contact-box">
-    <p>Let’s connect professionally 👇</p>
+  <div class="card contact-box">
+    <p>Email: bhumikagupta8791@gmail.com</p>
 
-    <div class="social-links">
-      
-      <a href="https://www.instagram.com/bhumikaavarshney/" target="_blank" class="social-btn instagram">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-
-      <a href="https://in.linkedin.com/in/bhumika-varshney-a27b0336b" target="_blank" class="social-btn linkedin">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-
-    </div>
+    <a href="https://www.instagram.com/bhumikaavarshney/"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://in.linkedin.com/in/bhumika-varshney-a27b0336b"><i class="fab fa-linkedin"></i> LinkedIn</a>
   </div>
 </section>
-</section>
-
-<div id="modal" class="modal" onclick="this.style.display='none'">
-  <span class="close">&times;</span>
-  <img id="modalImg">
-</div>
 
 <script>
-  const text = "Future Business Leader | BBA Student";
-  let i = 0;
-  function type() {
-    if (i < text.length) {
-      document.getElementById("typing").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(type, 50);
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".reveal").forEach(el => {
+    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+      el.classList.add("active");
     }
-  }
-  type();
+  });
+});
 
-  function openModal(src) {
-    document.getElementById("modal").style.display = "block";
-    document.getElementById("modalImg").src = src;
-  }
+// PARTICLES
+const c=document.getElementById("bg");
+const ctx=c.getContext("2d");
+c.width=window.innerWidth;
+c.height=window.innerHeight;
+
+let p=[];
+for(let i=0;i<80;i++){
+  p.push({x:Math.random()*c.width,y:Math.random()*c.height,s:Math.random()*2});
+}
+
+function a(){
+  ctx.clearRect(0,0,c.width,c.height);
+  p.forEach(e=>{
+    e.y+=0.3;
+    if(e.y>c.height)e.y=0;
+    ctx.beginPath();
+    ctx.arc(e.x,e.y,e.s,0,Math.PI*2);
+    ctx.fillStyle="#38bdf8";
+    ctx.fill();
+  });
+  requestAnimationFrame(a);
+}
+a();
 </script>
 
 </body>
