@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bhumika Varshney | Elite Portfolio</title>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #020617;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+    }
+
+    img.profile {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #38bdf8;
+      transition: 0.4s;
+      object-fit: cover;
+    }
+
+    img.profile:hover {
+      transform: scale(1.1);
+    }
+
+    h1 { margin: 15px 0 5px; }
+
+    #typing {
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #38bdf8;
+      color: black;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+    }
+
+    nav {
+      text-align: center;
+      background: black;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: #38bdf8;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    h2 {
+      color: #38bdf8;
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 10px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #38bdf8;
+    }
+
+    .bar {
+      background: #334155;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+
+    .fill {
+      height: 10px;
+      background: #38bdf8;
+      border-radius: 20px;
+    }
+
+    img.cert {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    a.social {
+      color: #38bdf8;
+      margin-right: 15px;
+      text-decoration: none;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      top: 0;
+      left: 0;
+    }
+
+    .modal img {
+      display: block;
+      margin: auto;
+      max-width: 90%;
+      margin-top: 60px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="profile.jpeg" class="profile">
+  <h1>Bhumika Varshney</h1>
+  <p id="typing"></p>
+  <a href="#contact" class="btn">Hire Me</a>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#certifications">Certificates</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    I am a driven and ambitious BBA student with a strong interest in business strategy, finance, and leadership. I take pride in being proactive, responsible, and capable of handling challenges with clarity and confidence.
+
+    My experience in event coordination and social media management has helped me develop strong communication, organizational, and decision-making skills. I am someone who adapts quickly, works well in team environments, and consistently looks for opportunities to grow beyond my comfort zone.
+
+    I am focused on building a meaningful career where I can contribute, learn continuously, and create real value in a professional environment.
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+
+  <div class="card">
+    <b>Bachelor of Business Administration (BBA)</b><br>
+    Aligarh Muslim University<br>
+    2023 – 2026
+  </div>
+
+  <div class="card">
+    <b>Class 12th (Senior Secondary)</b><br>
+    Radiant Stars English School<br>
+    Score: 94%
+  </div>
+
+  <div class="card">
+    <b>Class 10th (High School)</b><br>
+    Radiant Stars English School<br>
+    Score: 90%
+  </div>
+
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="card">
+
+    <p>Communication & Presentation</p>
+    <div class="bar"><div class="fill" style="width:92%"></div></div>
+
+    <p>Leadership & Team Coordination</p>
+    <div class="bar"><div class="fill" style="width:88%"></div></div>
+
+    <p>Social Media Management & Personal Branding</p>
+    <div class="bar"><div class="fill" style="width:90%"></div></div>
+
+    <p>Content Creation & Visual Storytelling</p>
+    <div class="bar"><div class="fill" style="width:87%"></div></div>
+
+    <p>Photography & Aesthetic Direction</p>
+    <div class="bar"><div class="fill" style="width:85%"></div></div>
+
+    <p>Digital Marketing & Audience Engagement</p>
+    <div class="bar"><div class="fill" style="width:82%"></div></div>
+
+    <p>Microsoft Office & Business Tools</p>
+    <div class="bar"><div class="fill" style="width:80%"></div></div>
+
+    <p>Time Management & Organizational Skills</p>
+    <div class="bar"><div class="fill" style="width:88%"></div></div>
+
+    <p>Adaptability & Problem Solving</p>
+    <div class="bar"><div class="fill" style="width:85%"></div></div>
+
+    <p>Confidence, Public Interaction & Personal Presence</p>
+    <div class="bar"><div class="fill" style="width:90%"></div></div>
+
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="card">
+    <b>Social Media & Event Coordination – AFIF, AMU</b><br><br>
+
+    • Managed and contributed to social media activities, improving engagement and visibility.<br>
+    • Actively participated in the AMU Market Immersion Program, gaining exposure to real-world business environments.<br>
+    • Coordinated with team members to plan and execute events efficiently.<br>
+    • Developed strong communication, teamwork, and organizational skills through practical involvement.<br>
+  </div>
+
+  <div class="card">
+    <b>Event Management & Leadership Experience</b><br><br>
+
+    • Organized and managed academic and co-curricular events at school and college level.<br>
+    • Handled responsibilities such as planning, coordination, and execution of activities.<br>
+    • Demonstrated leadership by managing teams and ensuring smooth workflow.<br>
+    • Built strong problem-solving abilities by handling real-time challenges during events.<br>
+  </div>
+
+
+  <div class="card">
+    <b>Market Research & Consumer Behavior Analysis</b><br><br>
+
+    • Conducted a study on consumer preferences and buying behavior in local markets.<br>
+    • Collected and analyzed data to identify trends and decision-making patterns.<br>
+    • Developed insights on pricing, product positioning, and customer expectations.<br>
+    • Enhanced analytical thinking and understanding of real-world business scenarios.<br>
+  </div>
+
+  <div class="card">
+    <b>Social Media Strategy & Brand Engagement Project</b><br><br>
+
+    • Designed a social media strategy to improve brand visibility and audience engagement.<br>
+    • Planned content ideas and engagement techniques for better reach and interaction.<br>
+    • Analyzed basic performance metrics to understand audience response.<br>
+    • Strengthened skills in digital marketing, creativity, and strategic thinking.<br>
+  </div>
+
+<section id="certifications" class="reveal">
+  <h2>Certifications</h2>
+
+  <div class="cert-grid">
+
+    <div class="cert-card">
+      AFIF Program
+      <img src="certificate 1.jpeg" onclick="openModal(this.src)">
+    </div>
+
+    <div class="cert-card">
+      Excel Workshop
+      <img src="certificate 2.jpeg" onclick="openModal(this.src)">
+    </div>
+
+    <div class="cert-card">
+      Web Design
+      <img src="certificate 3.jpg" onclick="openModal(this.src)">
+    </div>
+
+    <div class="cert-card">
+      Digital Marketing
+      <img src="certificate 4.png" onclick="openModal(this.src)">
+    </div>
+
+    <div class="cert-card">
+      Ornithology Quiz
+      <img src="certificate 5.jpeg" onclick="openModal(this.src)">
+    </div>
+
+    <div class="cert-card">
+      Business Communication
+      <img src="certificate 6.jpg" onclick="openModal(this.src)">
+    </div>
+
+  </div>
+</section>
+
+<section id="experience" class="reveal">
+  <h2>Experience</h2>
+
+  <div class="card">
+    <b>Internship – Robin Hood Army (RHA)</b><br><br>
+
+    • Recognized for dedication, responsibility, and contribution during internship.<br>
+    • Worked in team-driven initiatives focused on social impact and community support.<br>
+    • Developed strong teamwork, communication, and execution skills.<br><br>
+
+    <img src="internship 1.jpeg" class="cert" onclick="openModal(this.src)">
+  </div>
+
+  <div class="card">
+    <b>Research Internship – Borcelle Company</b><br><br>
+
+    • Worked on Sustainable Development Research project over a 5-month duration.<br>
+    • Gained exposure to research-based thinking, analysis, and structured work approach.<br>
+    • Strengthened problem-solving, analytical, and professional communication skills.<br><br>
+
+    <img src="internship 2.jpeg" class="cert" onclick="openModal(this.src)">
+  </div>
+
+</section>
+
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    Email: bhumikagupta8791@gmail.com <br>
+    Phone: 9389961002 <br><br>
+
+    <a class="social" href="https://in.linkedin.com/in/bhumika-varshney-a27b0336b">LinkedIn</a>
+    <a class="social" href="hhttps://www.instagram.com/bhumikaavarshney/">Instagram</a>
+  </div>
+</section>
+
+<div id="modal" class="modal" onclick="this.style.display='none'">
+  <span class="close">&times;</span>
+  <img id="modalImg">
+</div>
+
+<script>
+  const text = "Future Business Leader | BBA Student";
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, 50);
+    }
+  }
+  type();
+
+  function openModal(src) {
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("modalImg").src = src;
+  }
+</script>
+
+</body>
+</html>
