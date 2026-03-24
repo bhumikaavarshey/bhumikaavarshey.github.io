@@ -6,21 +6,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #020617;
-  color: white;
-}
-
-/* BACKGROUND */
-#bg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f9fafb;
+  color: #111;
 }
 
 /* NAVBAR */
@@ -28,107 +18,99 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
 }
 
-nav h1 { color: #38bdf8; }
+nav h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
 
 nav a {
-  margin-left: 15px;
-  color: #38bdf8;
+  margin-left: 20px;
   text-decoration: none;
+  color: #555;
+}
+
+nav a:hover {
+  color: black;
 }
 
 /* HEADER */
 header {
   text-align: center;
-  padding: 60px;
+  padding: 50px 20px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .profile {
-  width: 160px;
+  width: 120px;
   border-radius: 50%;
-  box-shadow: 0 0 30px #38bdf8;
+  margin-bottom: 15px;
 }
 
 /* SECTION */
 section {
   max-width: 900px;
-  margin: auto;
-  padding: 50px 20px;
-}
-
-/* ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1s;
-}
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+  margin: 30px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #eee;
 }
 
 h2 {
-  color: #38bdf8;
-  border-bottom: 2px solid #1e293b;
+  margin-bottom: 15px;
 }
 
 /* CARD */
 .card {
-  background: rgba(30,41,59,0.8);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px #38bdf8;
+  margin-top: 15px;
+  line-height: 1.6;
 }
 
 /* SKILLS */
-.bar { background: #334155; border-radius: 20px; }
-.fill { height: 10px; background: #38bdf8; }
+.bar {
+  background: #eee;
+  border-radius: 20px;
+}
 
-/* CERT GRID */
+.fill {
+  height: 8px;
+  background: #2563eb;
+  border-radius: 20px;
+}
+
+/* GRID */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
 }
 
 .cert-grid img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 /* CONTACT */
-.contact-box { text-align: center; }
-
-.contact-box a {
+.contact a {
   display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background: #38bdf8;
-  color: black;
-  border-radius: 20px;
+  margin-right: 15px;
   text-decoration: none;
+  color: #2563eb;
 }
 </style>
 </head>
 
 <body>
 
-<canvas id="bg"></canvas>
-
 <nav>
-  <h1>Bhumika</h1>
+  <h1>Bhumika Varshney</h1>
   <div>
     <a href="#about">About</a>
     <a href="#education">Education</a>
@@ -139,62 +121,55 @@ h2 {
   </div>
 </nav>
 
-<header class="reveal">
+<header>
   <img src="profile.jpeg" class="profile">
-  <h1>Bhumika Varshney</h1>
-  <p>Future Business Leader | BBA Student</p>
+  <h2>Bhumika Varshney</h2>
+  <p>BBA Student</p>
 </header>
 
-<!-- ABOUT -->
-<section id="about" class="reveal">
+<section id="about">
   <h2>About Me</h2>
-  <div class="card">
+  <p>
     I am a driven and ambitious BBA student with a strong interest in business strategy, finance, and leadership. I take pride in being proactive, responsible, and capable of handling challenges with clarity and confidence.
 
     My experience in event coordination and social media management has helped me develop strong communication, organizational, and decision-making skills. I am someone who adapts quickly, works well in team environments, and consistently looks for opportunities to grow beyond my comfort zone.
 
     I am focused on building a meaningful career where I can contribute, learn continuously, and create real value in a professional environment.
-  </div>
+  </p>
 </section>
 
-<!-- EDUCATION -->
-<section id="education" class="reveal">
+<section id="education">
   <h2>Education</h2>
 
   <div class="card">
-    <b>Bachelor of Business Administration (BBA)</b><br>
-    Aligarh Muslim University<br>
-    2023 – 2026
+    <b>BBA – Aligarh Muslim University</b><br>
+    2023–2026
   </div>
 
   <div class="card">
     <b>Class 12th</b><br>
-    Radiant Stars English School<br>
-    Score: 94%
+    94%
   </div>
 
   <div class="card">
     <b>Class 10th</b><br>
-    Radiant Stars English School<br>
-    Score: 90%
+    90%
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="reveal">
+<section id="skills">
   <h2>Skills</h2>
 
   <div class="card">
-    Communication & Presentation<div class="bar"><div class="fill" style="width:92%"></div></div>
-    Leadership & Team Coordination<div class="bar"><div class="fill" style="width:88%"></div></div>
-    Social Media Management<div class="bar"><div class="fill" style="width:90%"></div></div>
-    Content Creation<div class="bar"><div class="fill" style="width:87%"></div></div>
-    Photography<div class="bar"><div class="fill" style="width:85%"></div></div>
+    Communication<div class="bar"><div class="fill" style="width:90%"></div></div>
+    Leadership<div class="bar"><div class="fill" style="width:85%"></div></div>
+    Social Media<div class="bar"><div class="fill" style="width:90%"></div></div>
+    Content Creation<div class="bar"><div class="fill" style="width:85%"></div></div>
+    Photography<div class="bar"><div class="fill" style="width:80%"></div></div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="reveal">
+<section id="experience">
   <h2>Experience</h2>
 
   <div class="card">
@@ -213,18 +188,17 @@ h2 {
   </div>
 
   <div class="card">
-    <b>Internship – Robin Hood Army</b><br><br>
+    <b>Internship – Robin Hood Army</b><br>
     <img src="internship 1.jpeg" width="100%">
   </div>
 
   <div class="card">
-    <b>Research Internship – Borcelle</b><br><br>
+    <b>Research Internship – Borcelle</b><br>
     <img src="internship 2.jpeg" width="100%">
   </div>
 </section>
 
-<!-- CERTIFICATES -->
-<section id="certifications" class="reveal">
+<section id="certifications">
   <h2>Certificates</h2>
 
   <div class="cert-grid">
@@ -237,52 +211,20 @@ h2 {
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="reveal">
+<section id="contact" class="contact">
   <h2>Contact</h2>
 
-  <div class="card contact-box">
-    <p>Email: bhumikagupta8791@gmail.com</p>
+  <p>Email: bhumikagupta8791@gmail.com</p>
 
-    <a href="https://www.instagram.com/bhumikaavarshney/"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="https://in.linkedin.com/in/bhumika-varshney-a27b0336b"><i class="fab fa-linkedin"></i> LinkedIn</a>
-  </div>
+  <a href="https://instagram.com/YOURUSERNAME">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+
+  <a href="https://linkedin.com/in/YOURUSERNAME">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a>
+
 </section>
-
-<script>
-window.addEventListener("scroll", () => {
-  document.querySelectorAll(".reveal").forEach(el => {
-    if(el.getBoundingClientRect().top < window.innerHeight - 100){
-      el.classList.add("active");
-    }
-  });
-});
-
-// PARTICLES
-const c=document.getElementById("bg");
-const ctx=c.getContext("2d");
-c.width=window.innerWidth;
-c.height=window.innerHeight;
-
-let p=[];
-for(let i=0;i<80;i++){
-  p.push({x:Math.random()*c.width,y:Math.random()*c.height,s:Math.random()*2});
-}
-
-function a(){
-  ctx.clearRect(0,0,c.width,c.height);
-  p.forEach(e=>{
-    e.y+=0.3;
-    if(e.y>c.height)e.y=0;
-    ctx.beginPath();
-    ctx.arc(e.x,e.y,e.s,0,Math.PI*2);
-    ctx.fillStyle="#38bdf8";
-    ctx.fill();
-  });
-  requestAnimationFrame(a);
-}
-a();
-</script>
 
 </body>
 </html>
